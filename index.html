@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <script src="/assets/js/main.js"></script>
+    <script type="text/javascript" src="/assets/js/main.js"></script>
     <head>
         <meta charset='utf-8'>
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -13,13 +13,50 @@
     </head>
 
     <body>
-        <h1>Here you can create, save, and share Halls of Torment builds with other players.</h1>
+        <h2>Here you can create, save, and share Halls of Torment builds with other players.</h1>
         <div class="container">
             <div class="gearArea">
-                <h2>Test H2</h2>
+                <h3>Current Gear:</h2>
+                <label for="Head Slot">Head Slot:</label>
+                    <select name="head-items" id="head-items">
+                        <option>Choose a helm item</option>
+                    </select>
+                    
+                <br>
+                <br>
+                <label for="Neck Slot">Neck Slot:</label>
+                    <select name="neck-items" id="neck-items"></select>
+                <br>
+                <br>
+                <label for="Ring 1 Slot">Ring 1 Slot:</label>
+                    <select name="ring1-items" id="ring1-items"></select>
+                <br>
+                <br>
+                <label for="Ring 2 Slot">Ring 2 Slot:</label>
+                    <select name="ring2-items" id="ring2-items"></select>
+                <br>
+                <br>
+                <label for="Chest Slot">Chest Slot:</label>
+                    <select name="chest-items" id="chest-items"></select>
+                <br>
+                <br>
+                <label for="Gloves Slot">Glove Slot:</label>
+                    <select name="glove-items" id="glove-items"></select>
+                <br>
+                <br>
+                <label for="Boot Slot">Boot Slot:</label>
+                    <select name="boot-items" id="boot-items"></select>
+                <br>
+                <br>
             </div>
-            <div class="itemStorage">
-                <h2>Test H2</h2>
+            <div class="generateBuild">
+                <button id="genHashButton" onclick="generateHash()">Generate Build Hash</button>
+                <p id="hashContent"></p>
+            </div>
+            <div class="importBuild">
+                <input type="text" id="buildImportText">
+                <button id="importBuildButton" onclick="decryptHash()">Import Build</button>
+                <p id="decryptedContent"></p>
             </div>
         </div>
     </body>
